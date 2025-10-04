@@ -5,8 +5,13 @@ balance = float(input("Enter initial balance: "))
 
 # Take deposit amount
 deposit = float(input("Enter deposit amount: "))
-
-# Update balance
 balance += deposit
+print(f"Balance after deposit: {balance:.2f}")
 
-print(f"Updated balance: {balance:.2f}")
+# Take withdrawal amount
+withdraw = float(input("Enter amount to withdraw: "))
+if withdraw > balance:
+    print("Insufficient balance!")
+else:
+    balance -= withdraw
+    print(f"Balance after withdrawal: {balance:.2f}")
